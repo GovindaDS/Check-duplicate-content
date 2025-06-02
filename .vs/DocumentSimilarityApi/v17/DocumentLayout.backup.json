@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Project\\PolicyTech\\Hackathon\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{3FC910F6-2B55-4188-884A-C4858F329F48}|DocumentSimilarityApi.pyproj|C:\\Project\\PolicyTech\\Hackathon\\train_model.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3FC910F6-2B55-4188-884A-C4858F329F48}|DocumentSimilarityApi.pyproj|solutionrelative:train_model.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FC910F6-2B55-4188-884A-C4858F329F48}|DocumentSimilarityApi.pyproj|C:\\Project\\PolicyTech\\Hackathon\\DocumentSimilarityApi.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3FC910F6-2B55-4188-884A-C4858F329F48}|DocumentSimilarityApi.pyproj|solutionrelative:DocumentSimilarityApi.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FC910F6-2B55-4188-884A-C4858F329F48}|DocumentSimilarityApi.pyproj|C:\\Project\\PolicyTech\\Hackathon\\main.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3FC910F6-2B55-4188-884A-C4858F329F48}|DocumentSimilarityApi.pyproj|solutionrelative:main.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -95,45 +82,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DocumentSimilarityApi.py",
-              "DocumentMoniker": "C:\\Project\\PolicyTech\\Hackathon\\DocumentSimilarityApi.py",
-              "RelativeDocumentMoniker": "DocumentSimilarityApi.py",
-              "ToolTip": "C:\\Project\\PolicyTech\\Hackathon\\DocumentSimilarityApi.py",
-              "RelativeToolTip": "DocumentSimilarityApi.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-30T05:26:31.192Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "main.py",
-              "DocumentMoniker": "C:\\Project\\PolicyTech\\Hackathon\\main.py",
-              "RelativeDocumentMoniker": "main.py",
-              "ToolTip": "C:\\Project\\PolicyTech\\Hackathon\\main.py",
-              "RelativeToolTip": "main.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-30T05:26:21.862Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "train_model.py",
-              "DocumentMoniker": "C:\\Project\\PolicyTech\\Hackathon\\train_model.py",
-              "RelativeDocumentMoniker": "train_model.py",
-              "ToolTip": "C:\\Project\\PolicyTech\\Hackathon\\train_model.py",
-              "RelativeToolTip": "train_model.py",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHAAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-30T05:26:17.191Z",
-              "EditorCaption": ""
             }
           ]
         }
