@@ -106,7 +106,8 @@
               "RelativeToolTip": "DocumentSimilarityApi.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-30T14:19:10.506Z"
+              "WhenOpened": "2025-05-30T14:19:10.506Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -116,7 +117,7 @@
               "RelativeDocumentMoniker": "main.py",
               "ToolTip": "C:\\Project\\PolicyTech\\Hackathon\\main.py",
               "RelativeToolTip": "main.py",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACoAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAD4v3QAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2025-05-30T06:25:59.826Z",
               "EditorCaption": ""
@@ -129,9 +130,10 @@
               "RelativeDocumentMoniker": "train_model.py",
               "ToolTip": "C:\\Project\\PolicyTech\\Hackathon\\train_model.py",
               "RelativeToolTip": "train_model.py",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAAAIQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAIQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-05-30T06:14:03.055Z"
+              "WhenOpened": "2025-05-30T06:14:03.055Z",
+              "EditorCaption": ""
             }
           ]
         }

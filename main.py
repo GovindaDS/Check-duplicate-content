@@ -15,18 +15,29 @@ import re
 import pyodbc
 # Calculate cosine similarity
 from sklearn.metrics.pairwise import cosine_similarity
-
+from pydantic import BaseModel
 app = FastAPI()
 
+class requestBody(BaseModel):
+    id_Documentname: str
+    contentdata: str
 
 def create_model():
     model = SentenceTransformer('all-MiniLM-L6-v2')
     return model
+
 def train_model():
    
     conn_str = (
-                         # Use 'dbmssocn' for TCP/IP
+        "DRIVER={ODBC Driver 17 for SQL Server};"
+        "SERVER=localhost,1433;"            # Use 'localhost' instead of '.'
+        "DATABASE=PT_dm1_Data;"
+        "UID=PolicyTechApplicationUser;"
+        "PWD=X3A7Q=%tt.fx#vqsi9:X^4vq;"
+        "Connect Timeout=5;"
+        "Network=DBMSSOCN;"                  # Use 'dbmssocn' for TCP/IP
      )
+
 
     conn = pyodbc.connect(conn_str)
     cursor = conn.cursor()
@@ -100,15 +111,16 @@ def get_document_embedding(document_text, model):
 def get_similarity_score(doc1_embedding, doc2_embedding):
     return cosine_similarity(doc1_embedding.reshape(1, -1), doc2_embedding.reshape(1, -1))[0][0]
 
-def compare_content(newDocumentContent):
+def compare_content(documentIdwithTitle, newDocumentContent):
     my_dict = train_model()
     Documents_similaritys= {}
     newDocumentEmbedding = get_document_embedding(newDocumentContent, create_model())
     for key in my_dict:
-        similarity = get_similarity_score(my_dict[key],newDocumentEmbedding)
+        if key!= documentIdwithTitle:
+            similarity = get_similarity_score(my_dict[key],newDocumentEmbedding)
         #print(similarity)
-        # if similarity >= 0.75:
-        Documents_similaritys[key] = round(float(similarity), 4)
+            if similarity >= 0.75:
+                Documents_similaritys[key] = round(float(similarity), 4)
         #print(f"Document '{key}' is similar to the new document with a similarity score of {similarity:.4f}")
     return Documents_similaritys
 
@@ -129,22 +141,34 @@ def extract_text_from_file(file_path):
     else:
         raise ValueError("Unsupported file type")
 
+
 @app.post("/check-similar-documents")
-async def check_similar_documents(file: UploadFile = File(...), threshold: float = 0.75):
-    ext = os.path.splitext(file.filename)[1]
-    temp_file = f"temp{ext}"
-
-    with open(temp_file, "wb") as f:
-        f.write(await file.read())
-
+async def check_similar_documents(request: requestBody):
     try:
-        text = extract_text_from_file(temp_file)
-        Documents_similaritys = compare_content(text)
+        Documents_similaritys = compare_content(request.id_Documentname, request.contentdata)
         json_response = json.dumps(Documents_similaritys)
         return json_response
-
+ 
     except Exception as e:
         return {"error": str(e)}
+ 
 
-    finally:
-        os.remove(temp_file)
+# @app.post("/check-similar-documents")
+# async def check_similar_documents(file: UploadFile = File(...), threshold: float = 0.75):
+#     ext = os.path.splitext(file.filename)[1]
+#     temp_file = f"temp{ext}"
+
+#     with open(temp_file, "wb") as f:
+#         f.write(await file.read())
+
+#     try:
+#         text = extract_text_from_file(temp_file)
+#         Documents_similaritys = compare_content(text)
+#         json_response = json.dumps(Documents_similaritys)
+#         return json_response
+
+#     except Exception as e:
+#         return {"error": str(e)}
+
+#     finally:
+#         os.remove(temp_file)
