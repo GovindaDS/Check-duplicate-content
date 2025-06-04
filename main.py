@@ -29,13 +29,7 @@ def create_model():
 def train_model():
    
     conn_str = (
-        "DRIVER={ODBC Driver 17 for SQL Server};"
-        "SERVER=localhost,1433;"            # Use 'localhost' instead of '.'
-        "DATABASE=PT_dm1_Data;"
-        "UID=PolicyTechApplicationUser;"
-        "PWD=X3A7Q=%tt.fx#vqsi9:X^4vq;"
-        "Connect Timeout=5;"
-        "Network=DBMSSOCN;"                  # Use 'dbmssocn' for TCP/IP
+                    # Use 'dbmssocn' for TCP/IP
      )
 
 
@@ -152,23 +146,3 @@ async def check_similar_documents(request: requestBody):
     except Exception as e:
         return {"error": str(e)}
  
-
-# @app.post("/check-similar-documents")
-# async def check_similar_documents(file: UploadFile = File(...), threshold: float = 0.75):
-#     ext = os.path.splitext(file.filename)[1]
-#     temp_file = f"temp{ext}"
-
-#     with open(temp_file, "wb") as f:
-#         f.write(await file.read())
-
-#     try:
-#         text = extract_text_from_file(temp_file)
-#         Documents_similaritys = compare_content(text)
-#         json_response = json.dumps(Documents_similaritys)
-#         return json_response
-
-#     except Exception as e:
-#         return {"error": str(e)}
-
-#     finally:
-#         os.remove(temp_file)
